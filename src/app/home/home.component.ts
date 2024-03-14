@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FoodService } from '../services/food.service';
+import { Foods } from '../shared/models/food';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +10,12 @@ import { Component } from '@angular/core';
   
 export class HomeComponent {
 
+  foodsArray: Array<Foods> = [];
+
+  constructor(
+    private foodService: FoodService
+  ) {
+    
+    this.foodsArray = this.foodService.getAllFoods();
+  }
 }

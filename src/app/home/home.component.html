@@ -1,1 +1,38 @@
-<p>home works!</p>
+<ul class="container">
+    <li *ngFor="let food of foodsArray">
+        <div class="card">
+            <img src="{{food?.imageUrl}}" alt="foodImages">
+            <div class="food-details">
+                <div class="first-row">
+                    <span>
+                        {{food?.name}}
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-heart" *ngIf="food?.favorite"></i>
+                        <i class="fa-regular fa-heart" *ngIf="!food?.favorite"></i>
+                    </span>
+                </div>
+                <div class="second-row">
+
+                </div>
+                <div class="third-row">
+                    <div class="tags">
+                        <div class="tag" *ngFor="let tag of food?.tags">
+                            {{ tag }}
+                        </div>
+                    </div>
+                    <div class="time">
+                        {{ food?.cookTime }}
+                    </div>
+                    <!-- <span *ngFor="let item of food?.origin">
+                        {{ item }} 
+                    </span> -->
+                </div>
+                <div class="price">
+                    {{ food?.price | currency }}
+                </div>
+
+            </div>
+        </div>
+    </li>
+</ul>

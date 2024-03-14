@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.card{
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    margin: 0.5rem;
+    color: palevioletred;
+    border-radius: 1rem;
+}
+
+.card img{
+    border-radius: 0.5rem;
+    height: 15rem;
+    width: 15rem;
+    overflow:hidden;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.card img:hover{
+    opacity: 0.7;
+    width: 13rem;
+    height: 13rem;
+}
+
+.food-details{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite{
+    /* color: red; */
+    font-size: 1.5rem;
+    color: rgb(241, 88, 88);
+}
+
+
+.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.third-row{
+    font-size: .7rem;
+    display: flex;
+    margin-top: 0.4rem;
+}
+
+.tags{
+    flex: 9;
+    display: flex;
+}
+
+.tag{
+    background-color: rgb(221, 213, 213);
+    color: black;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    margin: 0 0%
+}
+
+.price{
+    color: gray;
+}
